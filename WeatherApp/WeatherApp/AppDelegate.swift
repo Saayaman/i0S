@@ -1,10 +1,3 @@
-//
-//  AppDelegate.swift
-//  WeatherApp
-//
-//  Created by Derrick Park on 2017-05-26.
-//  Copyright © 2017 Derrick Park. All rights reserved.
-//
 
 import UIKit
 
@@ -13,82 +6,36 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
         window = UIWindow(frame: UIScreen.main.bounds)
         
 //        window?.rootViewController = CityViewController()
-        window?.rootViewController = TabbarControler()
-        window?.makeKeyAndVisible()
-        return true
+//        window?.makeKeyAndVisible()
+       
+
+        let paris = City(Weather.clearnight,"paris")
+        let barcelona = City(Weather.rain,"barcelona")
+        let london = City(Weather.cloudy,"london")
+        let berlin = City(Weather.wind,"berlin")
+        let sanfrancisco = City(Weather.sunny,"sanfrancisco")
         
-   
-        enum Weather{
-            case sunny, cloudy, rainy, swony
-        }
-        
-        /*
-        class City{
-            var weather: String
-            var name: String
-            
-            init(_ weather:String, _ name:String) {
-                self.weather = weather
-                self.name = name
-            }
-        }
- */
-        
-        let paris = City("sunny","paris")
-        let tokyo = City("cloudy","Tokyo")
-        let london = City("rain","london")
-        let cairo = City("sunny","Cairo")
-        let helsinki = City("snowy","Helsinki")
+        let city1 = MakeCityView(paris, .featured)
+        let city2 = MakeCityView(barcelona, .contacts)
+        let city3 = MakeCityView(london,.downloads)
+        let city4 = MakeCityView(berlin, .history)
+        let city5 = MakeCityView(sanfrancisco, .search)
         
         
         let tabBarController = UITabBarController()
-        
-//        class MakeCityView{
-//
-//            
-//            var city:City
-//            var controller:CityViewController
-//            
-//            init(_ city:City, _ color:UIColor) {
-//                
-//        
-//                
-//                var count = 0
-//                self.city = city
-//                controller = CityViewController()
-//                
-//                //controller.city = paris
-//                
-//                controller.title = city.name
-//                controller.view.backgroundColor = color
-//                controller.tabBarItem = UITabBarItem(tabBarSystemItem: .featured, tag: count)
-//                count += 1
-//            }
-//        }
-        
-        let city1 = MakeCityView(paris, .blue)
-        let city2 = MakeCityView(tokyo, .red)
-        let city3 = MakeCityView(london, .brown)
-        let city4 = MakeCityView(cairo, .green)
-        let city5 = MakeCityView(helsinki, .purple)
-        
         let baseControllers = [city1.controller, city2.controller, city3.controller, city4.controller, city5.controller]
-        
         tabBarController.viewControllers = baseControllers.map{UINavigationController(rootViewController: $0) }
     
         window?.rootViewController = tabBarController
         window?.makeKeyAndVisible()
+        
         return true
     }
-    
-
-
 }
 
 class MakeCityView
@@ -96,16 +43,39 @@ class MakeCityView
     var city:City
     var controller:CityViewController
     
-    init(_ city: City, _ color:UIColor)
+    init(_ city: City, _ icon:UITabBarSystemItem)
     {
         var count = 0
         self.city = city
         print(city.name)
         
-        controller = CityViewController()
+        let weatherMaker = WeatherClass()
+        weatherMaker.setWeather(weather: (city.weather))
+        
+        controller = CityViewController(city: city, weatherMaker: weatherMaker)
         controller.title = city.name
-        controller.view.backgroundColor = color
-        controller.tabBarItem = UITabBarItem(tabBarSystemItem: .featured, tag: count)
+
+        controller.view.backgroundColor = weatherMaker.wcolor
+        controller.tabBarItem = UITabBarItem(title: city.name, image: UIImage(named: city.name), tag: count)
+
         count += 1
     }
 }
+
+
+//FAIL ! how to change scale change?
+//
+
+//
+//func resizeImage(image: UIImage, newWidth: CGFloat) -> UIImage? {
+//    
+//    let scale = newWidth / image.size.width
+//    let newHeight = image.size.height * scale
+//    UIGraphicsBeginImageContext(CGSize(width: newWidth, height: newHeight))
+//    image.draw(in: CGRect(x: 0, y: 0, width: newWidth, height: newHeight))
+//    
+//    let newImage = UIGraphicsGetImageFromCurrentImageContext()
+//    UIGraphicsEndImageContext()
+//    
+//    return newImage
+//}

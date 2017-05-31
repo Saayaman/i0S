@@ -16,6 +16,16 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         image1.image = UIImage(named: "dining_room.jpg")
+        
+        var imagenum = 10
+        
+        var count = 0
+        for _ in 0...imagenum{
+            let imageView = UIImageView(frame: CGRect(x: count, y: 0, width: 50, height: 100))
+            view.addSubview(imageView)
+            imageView.backgroundColor = UIColor.blue
+            count += 60
+        }
     }
 
     override func didReceiveMemoryWarning() {

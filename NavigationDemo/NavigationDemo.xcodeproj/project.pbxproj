@@ -13,6 +13,7 @@
 		7405DCBB1EDCCE1B0037B65A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7405DCBA1EDCCE1B0037B65A /* Assets.xcassets */; };
 		7405DCBE1EDCCE1B0037B65A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7405DCBC1EDCCE1B0037B65A /* LaunchScreen.storyboard */; };
 		7405DCCA1EDCD21A0037B65A /* NextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7405DCC91EDCD21A0037B65A /* NextViewController.swift */; };
+		74BBD2171EDD2EE9000BACC0 /* SencondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74BBD2161EDD2EE9000BACC0 /* SencondViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		7405DCBD1EDCCE1B0037B65A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7405DCBF1EDCCE1B0037B65A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7405DCC91EDCD21A0037B65A /* NextViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NextViewController.swift; sourceTree = "<group>"; };
+		74BBD2161EDD2EE9000BACC0 /* SencondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SencondViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				7405DCBC1EDCCE1B0037B65A /* LaunchScreen.storyboard */,
 				7405DCBF1EDCCE1B0037B65A /* Info.plist */,
 				7405DCC91EDCD21A0037B65A /* NextViewController.swift */,
+				74BBD2161EDD2EE9000BACC0 /* SencondViewController.swift */,
 			);
 			path = NavigationDemo;
 			sourceTree = "<group>";
@@ -142,6 +145,7 @@
 				7405DCB61EDCCE1B0037B65A /* ViewController.swift in Sources */,
 				7405DCCA1EDCD21A0037B65A /* NextViewController.swift in Sources */,
 				7405DCB41EDCCE1B0037B65A /* AppDelegate.swift in Sources */,
+				74BBD2171EDD2EE9000BACC0 /* SencondViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -305,6 +309,7 @@
 				7405DCC41EDCCE1B0037B65A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
