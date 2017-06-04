@@ -8,19 +8,16 @@
 
 import UIKit
 
-
-
 class CityViewController: UIViewController {
     
     var city: City?
     var weatherMaker: WeatherClass?
     
-     //問題!!!
+    //問題!!!
     
     convenience init(city:City, weatherMaker:WeatherClass){
         
         self.init(nibName: nil, bundle: nil)
-
         self.city = city
         self.weatherMaker = weatherMaker
         
