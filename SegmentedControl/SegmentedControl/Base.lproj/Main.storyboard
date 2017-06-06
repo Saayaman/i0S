@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SegmentedControl" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="GOh-Na-iln">
+                                <rect key="frame" x="127" y="36" width="121" height="29"/>
+                                <segments>
+                                    <segment title="First"/>
+                                    <segment title="Second"/>
+                                </segments>
+                                <connections>
+                                    <action selector="indexChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="A7F-Le-XFg"/>
+                                </connections>
+                            </segmentedControl>
+                            <view tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d8L-zx-OXS">
+                                <rect key="frame" x="0.0" y="112" width="375" height="489"/>
+                                <color key="backgroundColor" red="1" green="0.63405355829999999" blue="0.2288050318" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lxq-G6-O7f">
+                                <rect key="frame" x="0.0" y="132" width="375" height="535"/>
+                                <color key="backgroundColor" red="0.38579383029999997" green="0.33339850180000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="535" id="XOf-N1-hrt"/>
+                                    <constraint firstAttribute="width" constant="375" id="dIH-Z1-tsO"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="d8L-zx-OXS" firstAttribute="leading" secondItem="lxq-G6-O7f" secondAttribute="leading" id="0Oh-bo-bqi"/>
+                            <constraint firstItem="GOh-Na-iln" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="10L-G7-xU2"/>
+                            <constraint firstItem="lxq-G6-O7f" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4yw-w7-Bwh"/>
+                            <constraint firstItem="d8L-zx-OXS" firstAttribute="trailing" secondItem="lxq-G6-O7f" secondAttribute="trailing" id="8qv-Ia-9Ee"/>
+                            <constraint firstItem="lxq-G6-O7f" firstAttribute="top" secondItem="GOh-Na-iln" secondAttribute="bottom" constant="68" id="BqB-LI-j0R"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="d8L-zx-OXS" secondAttribute="bottom" constant="66" id="asU-mk-Od1"/>
+                            <constraint firstItem="d8L-zx-OXS" firstAttribute="top" secondItem="GOh-Na-iln" secondAttribute="bottom" constant="48" id="khA-1j-9Qa"/>
+                            <constraint firstItem="GOh-Na-iln" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="16" id="t4w-uq-5po"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="blueBG" destination="lxq-G6-O7f" id="tKT-hI-S0i"/>
+                        <outlet property="orangeBG" destination="d8L-zx-OXS" id="IUz-OG-TDx"/>
+                        <outlet property="segControl" destination="GOh-Na-iln" id="6DB-gq-ctI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="84" y="38.23088455772114"/>
+        </scene>
+    </scenes>
+</document>
