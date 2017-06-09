@@ -31,18 +31,27 @@
                                     <action selector="indexChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="A7F-Le-XFg"/>
                                 </connections>
                             </segmentedControl>
-                            <view tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d8L-zx-OXS">
+                            <view tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d8L-zx-OXS" customClass="FirstVC2" customModule="SegmentedControl" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="112" width="375" height="489"/>
                                 <color key="backgroundColor" red="1" green="0.63405355829999999" blue="0.2288050318" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lxq-G6-O7f">
-                                <rect key="frame" x="0.0" y="132" width="375" height="535"/>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lxq-G6-O7f" customClass="FirstVC" customModule="SegmentedControl" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="112" width="375" height="555"/>
                                 <color key="backgroundColor" red="0.38579383029999997" green="0.33339850180000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="535" id="XOf-N1-hrt"/>
                                     <constraint firstAttribute="width" constant="375" id="dIH-Z1-tsO"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hRd-e9-huy">
+                                <rect key="frame" x="122" y="571" width="131" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <rect key="contentStretch" x="1" y="1" width="1" height="1"/>
+                                <state key="normal" title="GO TO NEXT PAGE"/>
+                                <connections>
+                                    <segue destination="LaM-Pf-AXf" kind="show" id="coy-3f-pEa"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -52,6 +61,8 @@
                             <constraint firstItem="d8L-zx-OXS" firstAttribute="trailing" secondItem="lxq-G6-O7f" secondAttribute="trailing" id="8qv-Ia-9Ee"/>
                             <constraint firstItem="lxq-G6-O7f" firstAttribute="top" secondItem="GOh-Na-iln" secondAttribute="bottom" constant="68" id="BqB-LI-j0R"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="d8L-zx-OXS" secondAttribute="bottom" constant="66" id="asU-mk-Od1"/>
+                            <constraint firstItem="hRd-e9-huy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bwU-8p-KtO"/>
+                            <constraint firstItem="hRd-e9-huy" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="252.5" id="d4T-Im-i1d"/>
                             <constraint firstItem="d8L-zx-OXS" firstAttribute="top" secondItem="GOh-Na-iln" secondAttribute="bottom" constant="48" id="khA-1j-9Qa"/>
                             <constraint firstItem="GOh-Na-iln" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="16" id="t4w-uq-5po"/>
                         </constraints>
@@ -65,6 +76,38 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="84" y="38.23088455772114"/>
+        </scene>
+        <!--SecondVC-->
+        <scene sceneID="t8n-GC-C9h">
+            <objects>
+                <viewController id="LaM-Pf-AXf" customClass="SecondVC" customModule="SegmentedControl" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="w4k-Ms-xeq"/>
+                        <viewControllerLayoutGuide type="bottom" id="eFD-ME-bOc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="O23-IN-Gkr">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Quh-eX-15J">
+                                <rect key="frame" x="105" y="56" width="187" height="58"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.62899536311567517" green="1" blue="0.50765041046608639" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Edit"/>
+                                <connections>
+                                    <action selector="edit:" destination="LaM-Pf-AXf" eventType="touchUpInside" id="9o9-nN-EXm"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="editBtn" destination="Quh-eX-15J" id="j3m-vp-T7X"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tc5-Ql-dHj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="751.20000000000005" y="37.331334332833585"/>
         </scene>
     </scenes>
 </document>

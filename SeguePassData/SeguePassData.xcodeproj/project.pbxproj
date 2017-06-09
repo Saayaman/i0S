@@ -7,31 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7431380D1EE7565A00D82B05 /* SecondVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7431380C1EE7565A00D82B05 /* SecondVC.swift */; };
-		74952D331EE7727700760249 /* FirstVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74952D321EE7727700760249 /* FirstVC.swift */; };
-		74952D351EE7729800760249 /* FirstVC2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74952D341EE7729800760249 /* FirstVC2.swift */; };
-		749FED3C1EE7340D00D24CAE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749FED3B1EE7340D00D24CAE /* AppDelegate.swift */; };
-		749FED3E1EE7340D00D24CAE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749FED3D1EE7340D00D24CAE /* ViewController.swift */; };
-		749FED411EE7340D00D24CAE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 749FED3F1EE7340D00D24CAE /* Main.storyboard */; };
-		749FED431EE7340D00D24CAE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 749FED421EE7340D00D24CAE /* Assets.xcassets */; };
-		749FED461EE7340D00D24CAE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 749FED441EE7340D00D24CAE /* LaunchScreen.storyboard */; };
+		745743291EE9CB2D009FF1B8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745743281EE9CB2D009FF1B8 /* AppDelegate.swift */; };
+		7457432B1EE9CB2D009FF1B8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7457432A1EE9CB2D009FF1B8 /* ViewController.swift */; };
+		7457432E1EE9CB2D009FF1B8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7457432C1EE9CB2D009FF1B8 /* Main.storyboard */; };
+		745743301EE9CB2D009FF1B8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7457432F1EE9CB2D009FF1B8 /* Assets.xcassets */; };
+		745743331EE9CB2D009FF1B8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 745743311EE9CB2D009FF1B8 /* LaunchScreen.storyboard */; };
+		7457433B1EE9CC88009FF1B8 /* ReceiverController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7457433A1EE9CC88009FF1B8 /* ReceiverController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		7431380C1EE7565A00D82B05 /* SecondVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondVC.swift; sourceTree = "<group>"; };
-		74952D321EE7727700760249 /* FirstVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstVC.swift; sourceTree = "<group>"; };
-		74952D341EE7729800760249 /* FirstVC2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstVC2.swift; sourceTree = "<group>"; };
-		749FED381EE7340D00D24CAE /* SegmentedControl.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SegmentedControl.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		749FED3B1EE7340D00D24CAE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		749FED3D1EE7340D00D24CAE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		749FED401EE7340D00D24CAE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		749FED421EE7340D00D24CAE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		749FED451EE7340D00D24CAE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		749FED471EE7340D00D24CAE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		745743251EE9CB2D009FF1B8 /* SeguePassData.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SeguePassData.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		745743281EE9CB2D009FF1B8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		7457432A1EE9CB2D009FF1B8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		7457432D1EE9CB2D009FF1B8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		7457432F1EE9CB2D009FF1B8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		745743321EE9CB2D009FF1B8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		745743341EE9CB2D009FF1B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7457433A1EE9CC88009FF1B8 /* ReceiverController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReceiverController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		749FED351EE7340D00D24CAE /* Frameworks */ = {
+		745743221EE9CB2D009FF1B8 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -41,75 +37,73 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		749FED2F1EE7340D00D24CAE = {
+		7457431C1EE9CB2D009FF1B8 = {
 			isa = PBXGroup;
 			children = (
-				749FED3A1EE7340D00D24CAE /* SegmentedControl */,
-				749FED391EE7340D00D24CAE /* Products */,
+				745743271EE9CB2D009FF1B8 /* SeguePassData */,
+				745743261EE9CB2D009FF1B8 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		749FED391EE7340D00D24CAE /* Products */ = {
+		745743261EE9CB2D009FF1B8 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				749FED381EE7340D00D24CAE /* SegmentedControl.app */,
+				745743251EE9CB2D009FF1B8 /* SeguePassData.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		749FED3A1EE7340D00D24CAE /* SegmentedControl */ = {
+		745743271EE9CB2D009FF1B8 /* SeguePassData */ = {
 			isa = PBXGroup;
 			children = (
-				749FED3B1EE7340D00D24CAE /* AppDelegate.swift */,
-				749FED3D1EE7340D00D24CAE /* ViewController.swift */,
-				749FED3F1EE7340D00D24CAE /* Main.storyboard */,
-				749FED421EE7340D00D24CAE /* Assets.xcassets */,
-				749FED441EE7340D00D24CAE /* LaunchScreen.storyboard */,
-				749FED471EE7340D00D24CAE /* Info.plist */,
-				7431380C1EE7565A00D82B05 /* SecondVC.swift */,
-				74952D321EE7727700760249 /* FirstVC.swift */,
-				74952D341EE7729800760249 /* FirstVC2.swift */,
+				745743281EE9CB2D009FF1B8 /* AppDelegate.swift */,
+				7457432A1EE9CB2D009FF1B8 /* ViewController.swift */,
+				7457433A1EE9CC88009FF1B8 /* ReceiverController.swift */,
+				7457432C1EE9CB2D009FF1B8 /* Main.storyboard */,
+				7457432F1EE9CB2D009FF1B8 /* Assets.xcassets */,
+				745743311EE9CB2D009FF1B8 /* LaunchScreen.storyboard */,
+				745743341EE9CB2D009FF1B8 /* Info.plist */,
 			);
-			path = SegmentedControl;
+			path = SeguePassData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		749FED371EE7340D00D24CAE /* SegmentedControl */ = {
+		745743241EE9CB2D009FF1B8 /* SeguePassData */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 749FED4A1EE7340D00D24CAE /* Build configuration list for PBXNativeTarget "SegmentedControl" */;
+			buildConfigurationList = 745743371EE9CB2D009FF1B8 /* Build configuration list for PBXNativeTarget "SeguePassData" */;
 			buildPhases = (
-				749FED341EE7340D00D24CAE /* Sources */,
-				749FED351EE7340D00D24CAE /* Frameworks */,
-				749FED361EE7340D00D24CAE /* Resources */,
+				745743211EE9CB2D009FF1B8 /* Sources */,
+				745743221EE9CB2D009FF1B8 /* Frameworks */,
+				745743231EE9CB2D009FF1B8 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = SegmentedControl;
-			productName = SegmentedControl;
-			productReference = 749FED381EE7340D00D24CAE /* SegmentedControl.app */;
+			name = SeguePassData;
+			productName = SeguePassData;
+			productReference = 745743251EE9CB2D009FF1B8 /* SeguePassData.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		749FED301EE7340D00D24CAE /* Project object */ = {
+		7457431D1EE9CB2D009FF1B8 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
 				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = ayako_sayama;
 				TargetAttributes = {
-					749FED371EE7340D00D24CAE = {
+					745743241EE9CB2D009FF1B8 = {
 						CreatedOnToolsVersion = 8.3.2;
 						ProvisioningStyle = Automatic;
 					};
 				};
 			};
-			buildConfigurationList = 749FED331EE7340D00D24CAE /* Build configuration list for PBXProject "SegmentedControl" */;
+			buildConfigurationList = 745743201EE9CB2D009FF1B8 /* Build configuration list for PBXProject "SeguePassData" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -117,57 +111,55 @@
 				en,
 				Base,
 			);
-			mainGroup = 749FED2F1EE7340D00D24CAE;
-			productRefGroup = 749FED391EE7340D00D24CAE /* Products */;
+			mainGroup = 7457431C1EE9CB2D009FF1B8;
+			productRefGroup = 745743261EE9CB2D009FF1B8 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				749FED371EE7340D00D24CAE /* SegmentedControl */,
+				745743241EE9CB2D009FF1B8 /* SeguePassData */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		749FED361EE7340D00D24CAE /* Resources */ = {
+		745743231EE9CB2D009FF1B8 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				749FED461EE7340D00D24CAE /* LaunchScreen.storyboard in Resources */,
-				749FED431EE7340D00D24CAE /* Assets.xcassets in Resources */,
-				749FED411EE7340D00D24CAE /* Main.storyboard in Resources */,
+				745743331EE9CB2D009FF1B8 /* LaunchScreen.storyboard in Resources */,
+				745743301EE9CB2D009FF1B8 /* Assets.xcassets in Resources */,
+				7457432E1EE9CB2D009FF1B8 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		749FED341EE7340D00D24CAE /* Sources */ = {
+		745743211EE9CB2D009FF1B8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				749FED3E1EE7340D00D24CAE /* ViewController.swift in Sources */,
-				74952D331EE7727700760249 /* FirstVC.swift in Sources */,
-				7431380D1EE7565A00D82B05 /* SecondVC.swift in Sources */,
-				749FED3C1EE7340D00D24CAE /* AppDelegate.swift in Sources */,
-				74952D351EE7729800760249 /* FirstVC2.swift in Sources */,
+				7457432B1EE9CB2D009FF1B8 /* ViewController.swift in Sources */,
+				7457433B1EE9CC88009FF1B8 /* ReceiverController.swift in Sources */,
+				745743291EE9CB2D009FF1B8 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		749FED3F1EE7340D00D24CAE /* Main.storyboard */ = {
+		7457432C1EE9CB2D009FF1B8 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				749FED401EE7340D00D24CAE /* Base */,
+				7457432D1EE9CB2D009FF1B8 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		749FED441EE7340D00D24CAE /* LaunchScreen.storyboard */ = {
+		745743311EE9CB2D009FF1B8 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				749FED451EE7340D00D24CAE /* Base */,
+				745743321EE9CB2D009FF1B8 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -175,7 +167,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		749FED481EE7340D00D24CAE /* Debug */ = {
+		745743351EE9CB2D009FF1B8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -226,7 +218,7 @@
 			};
 			name = Debug;
 		};
-		749FED491EE7340D00D24CAE /* Release */ = {
+		745743361EE9CB2D009FF1B8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -270,25 +262,25 @@
 			};
 			name = Release;
 		};
-		749FED4B1EE7340D00D24CAE /* Debug */ = {
+		745743381EE9CB2D009FF1B8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = SegmentedControl/Info.plist;
+				INFOPLIST_FILE = SeguePassData/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ayakosayama.SegmentedControl;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ayakosayama.SeguePassData;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
-		749FED4C1EE7340D00D24CAE /* Release */ = {
+		745743391EE9CB2D009FF1B8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = SegmentedControl/Info.plist;
+				INFOPLIST_FILE = SeguePassData/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ayakosayama.SegmentedControl;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ayakosayama.SeguePassData;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -297,25 +289,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		749FED331EE7340D00D24CAE /* Build configuration list for PBXProject "SegmentedControl" */ = {
+		745743201EE9CB2D009FF1B8 /* Build configuration list for PBXProject "SeguePassData" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				749FED481EE7340D00D24CAE /* Debug */,
-				749FED491EE7340D00D24CAE /* Release */,
+				745743351EE9CB2D009FF1B8 /* Debug */,
+				745743361EE9CB2D009FF1B8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		749FED4A1EE7340D00D24CAE /* Build configuration list for PBXNativeTarget "SegmentedControl" */ = {
+		745743371EE9CB2D009FF1B8 /* Build configuration list for PBXNativeTarget "SeguePassData" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				749FED4B1EE7340D00D24CAE /* Debug */,
-				749FED4C1EE7340D00D24CAE /* Release */,
+				745743381EE9CB2D009FF1B8 /* Debug */,
+				745743391EE9CB2D009FF1B8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 749FED301EE7340D00D24CAE /* Project object */;
+	rootObject = 7457431D1EE9CB2D009FF1B8 /* Project object */;
 }
