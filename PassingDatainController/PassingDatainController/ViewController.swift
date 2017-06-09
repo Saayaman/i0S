@@ -11,25 +11,22 @@ import UIKit
 class ViewController: UIViewController {
 
 
+    @IBOutlet weak var textField: UITextField!
+    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
     
-    
-    @IBOutlet weak var topLabel: UILabel!
     
     @IBAction func passText(_ sender: Any) {
         
         let myVC = storyboard?.instantiateViewController(withIdentifier: "SecondViewController") as! SecondViewController
-        myVC.stringPassed = topLabel.text!
+        let textString = textField.text!
         
+        myVC.stringPassed = textString
         navigationController?.pushViewController(myVC, animated: true)
     }
 

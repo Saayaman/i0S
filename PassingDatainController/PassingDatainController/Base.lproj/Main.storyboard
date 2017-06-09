@@ -36,17 +36,23 @@
                                     <action selector="passText:" destination="BYZ-38-t0r" eventType="touchUpInside" id="r5g-DY-CSM"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Pass this text" borderStyle="bezel" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TV5-LH-cOA">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Enter Text Here!" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TV5-LH-cOA">
                                 <rect key="frame" x="51" y="247" width="272" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="3Dc-qb-UBf"/>
+                                    <constraint firstAttribute="width" constant="272" id="J14-Ec-tYn"/>
+                                </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Pass this label Texxt" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zpd-c1-JkA">
-                                <rect key="frame" x="51" y="334" width="272" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.70674176701954261" green="1" blue="0.2206843906106033" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pass this Text Above to next Page!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zpd-c1-JkA">
+                                <rect key="frame" x="56" y="304" width="262.5" height="21"/>
+                                <color key="backgroundColor" red="0.70674176701954261" green="1" blue="0.2206843906106033" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="Zdh-EV-6cZ"/>
+                                    <constraint firstAttribute="width" constant="262.5" id="qvc-pH-LJY"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -55,12 +61,16 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="UZi-5o-OI0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3ko-JE-WwG"/>
+                            <constraint firstItem="Zpd-c1-JkA" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-19" id="9UE-I3-VBx"/>
+                            <constraint firstItem="TV5-LH-cOA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ixs-Ij-9VB"/>
                             <constraint firstItem="UZi-5o-OI0" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="172" id="Jmw-cD-hAQ"/>
+                            <constraint firstItem="TV5-LH-cOA" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-71.5" id="v8o-nr-sNs"/>
+                            <constraint firstItem="Zpd-c1-JkA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vvr-0n-PTy"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="fQ0-MJ-5Fb"/>
                     <connections>
-                        <outlet property="topLabel" destination="Zpd-c1-JkA" id="SUz-I3-zi3"/>
+                        <outlet property="textField" destination="TV5-LH-cOA" id="gc5-so-rZp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -118,23 +128,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d5k-ye-zpl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="117.59999999999999" y="-560.86956521739137"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="2il-5A-YqE">
-            <objects>
-                <viewController id="Vnz-6X-F1e" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="c9j-pj-cL6"/>
-                        <viewControllerLayoutGuide type="bottom" id="MJH-jd-iAE"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Kdo-5B-NwZ">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Xbw-wz-RAE" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
         </scene>
     </scenes>
 </document>
