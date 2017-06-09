@@ -1,7 +1,9 @@
-# i0S
+# PassingDatawithSegue
 
-These are practice codes I've been doing for class and for myself!
-I hope these help you understand better iOS like me!
+This is a practice I did using the delegate design pattern to pass data between each ViewController.
+In this case, colors are passed to each other
 
-I will upload as many gifs as possible
+Note： This is not stored in any database so this is a one-time execution
+
+This is how it looks.
 ![alt text](https://github.com/Saayaman/ImageStorage/blob/master/passingData.gif)
