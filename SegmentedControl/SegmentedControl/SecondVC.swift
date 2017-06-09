@@ -22,7 +22,6 @@ class SecondVC: ViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
         tap = UITapGestureRecognizer(target: self, action: #selector(doubleTapped))
         tap?.numberOfTapsRequired = 1
         self.view.addGestureRecognizer(tap!)
@@ -31,7 +30,6 @@ class SecondVC: ViewController{
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         
-
             if let touch = touches.first {
                 let position = touch.location(in: self.view)
                 positionX = position.x

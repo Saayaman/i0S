@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		7431380D1EE7565A00D82B05 /* SecondVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7431380C1EE7565A00D82B05 /* SecondVC.swift */; };
-		74952D331EE7727700760249 /* FirstVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74952D321EE7727700760249 /* FirstVC.swift */; };
-		74952D351EE7729800760249 /* FirstVC2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74952D341EE7729800760249 /* FirstVC2.swift */; };
 		749FED3C1EE7340D00D24CAE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749FED3B1EE7340D00D24CAE /* AppDelegate.swift */; };
 		749FED3E1EE7340D00D24CAE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749FED3D1EE7340D00D24CAE /* ViewController.swift */; };
 		749FED411EE7340D00D24CAE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 749FED3F1EE7340D00D24CAE /* Main.storyboard */; };
@@ -19,8 +17,6 @@
 
 /* Begin PBXFileReference section */
 		7431380C1EE7565A00D82B05 /* SecondVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondVC.swift; sourceTree = "<group>"; };
-		74952D321EE7727700760249 /* FirstVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstVC.swift; sourceTree = "<group>"; };
-		74952D341EE7729800760249 /* FirstVC2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstVC2.swift; sourceTree = "<group>"; };
 		749FED381EE7340D00D24CAE /* SegmentedControl.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SegmentedControl.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		749FED3B1EE7340D00D24CAE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		749FED3D1EE7340D00D24CAE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -67,8 +63,6 @@
 				749FED441EE7340D00D24CAE /* LaunchScreen.storyboard */,
 				749FED471EE7340D00D24CAE /* Info.plist */,
 				7431380C1EE7565A00D82B05 /* SecondVC.swift */,
-				74952D321EE7727700760249 /* FirstVC.swift */,
-				74952D341EE7729800760249 /* FirstVC2.swift */,
 			);
 			path = SegmentedControl;
 			sourceTree = "<group>";
@@ -146,10 +140,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				749FED3E1EE7340D00D24CAE /* ViewController.swift in Sources */,
-				74952D331EE7727700760249 /* FirstVC.swift in Sources */,
 				7431380D1EE7565A00D82B05 /* SecondVC.swift in Sources */,
 				749FED3C1EE7340D00D24CAE /* AppDelegate.swift in Sources */,
-				74952D351EE7729800760249 /* FirstVC2.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
