@@ -10,7 +10,8 @@ import UIKit
 
 class ViewController: UIViewController, UIScrollViewDelegate {
     
-    var scrollView: UIScrollView!
+    
+    var imageView: UIImageView!
     
     var redView:UIView!
     var greenView:UIView!
@@ -20,7 +21,6 @@ class ViewController: UIViewController, UIScrollViewDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         
         redView = UIView(frame: CGRect(x: 20, y: 20, width: 100, height: 100))
         greenView = UIView(frame: CGRect(x: 150, y: 150, width: 150, height: 200))
@@ -32,28 +32,21 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         blueView.backgroundColor = UIColor.blue
         yellowView.backgroundColor = UIColor.yellow
         
-        scrollView = UIScrollView(frame: view.bounds)
-        scrollView.backgroundColor = UIColor.black
-        scrollView.contentSize = view.bounds.size
-        scrollView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        scrollView.contentOffset = CGPoint(x: -100, y: -100)
-        scrollView.delegate = self
-        
-        
-        view.addSubview(scrollView)
         
         view.addSubview(redView)
         view.addSubview(greenView)
         view.addSubview(blueView)
         view.addSubview(yellowView)
         
-//        setupGestureRecognizer()
 
     }
+    
+    
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+
+    override func viewWillAppear(_ animated: Bool) {
+        
+        view.bounds.origin.y += 100
     }
 
 
