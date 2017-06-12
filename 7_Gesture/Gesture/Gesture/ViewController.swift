@@ -11,6 +11,10 @@ import UIKit
 class ViewController: UIViewController {
     
     
+    
+    var label = UILabel()
+
+    
     let swipeRightRec = UISwipeGestureRecognizer()
     let swipeLeftRec = UISwipeGestureRecognizer()
     let swipeUpRec = UISwipeGestureRecognizer()
@@ -25,6 +29,17 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        label.text = "Some Sentence"
+        label.frame = CGRect(x: view.bounds.size.width/2, y: 50, width: view.bounds.size.width, height: 120)
+        label.numberOfLines = 3
+        label.textAlignment = .center
+//        label.sizeToFit()
+        label.backgroundColor = UIColor.yellow
+        label.center = view.center
+        
+        view.addSubview(label)
+        
 
         swipeRightRec.direction = UISwipeGestureRecognizerDirection.right
         swipeLeftRec.direction = UISwipeGestureRecognizerDirection.left
@@ -46,7 +61,6 @@ class ViewController: UIViewController {
         
 
 //        tapRec.addTartget(self, action: #selector(doubleTapwithTwoFingers))
-        
 //        rotateRec.addTarget(self, action: #selector(rotated(sender: )))
         
     
@@ -62,33 +76,33 @@ class ViewController: UIViewController {
     }
     
     func swipedRight(){
-        print("swiped right")
+        label.text = "swiped right!"
     }
 
     func swipedLeft(){
-        print("swiped left")
+        label.text = "swiped left!"
     }
 
     func swipedUp(){
-        print("swiped up")
+        label.text = "swiped up!"
     }
 
     func swipedDown(){
-        print("swiped down")
+        label.text = "swipted down!"
     }
     
     func doubleTapwithTwoFingers(){
-        print("double tapped!")
+        label.text = "double tapped!"
     }
     
     func rotated(sender:UIRotationGestureRecognizer){
         if sender.state == .began {
-            print("begin rotating")
+            label.text = "begin rotating"
         } else if sender.state == .changed{
-            print("changed!")
-            print("Rotation: \(sender.rotation)\n Velocity: \(sender.velocity)")
+            label.text = "changed!+ \n Rotation: \(sender.rotation)\n Velocity: \(sender.velocity)"
+//            print("Rotation: \(sender.rotation)\n Velocity: \(sender.velocity)")
         } else if sender.state == .ended{
-            print("ended")
+            label.text = "ended"
         }
     }
 
