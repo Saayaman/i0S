@@ -27,13 +27,18 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         blueView = UIView(frame: CGRect(x: 40, y: 400, width: 200, height: 150))
         yellowView = UIView(frame: CGRect(x: 100, y: 600, width: 180, height: 150))
         
-//        scrollView = UIScrollView(frame: view.bounds)
-//        scrollView.backgroundColor = UIColor.black
-//        scrollView.contentSize = imageView.bounds.size
-//        scrollView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-//        scrollView.contentOffset = CGPoint(x: -100, y: -100)
-//        scrollView.delegate = self
-//        setZoomScale()
+        redView.backgroundColor = UIColor.red
+        greenView.backgroundColor = UIColor.green
+        blueView.backgroundColor = UIColor.blue
+        yellowView.backgroundColor = UIColor.yellow
+        
+        scrollView = UIScrollView(frame: view.bounds)
+        scrollView.backgroundColor = UIColor.black
+        scrollView.contentSize = view.bounds.size
+        scrollView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        scrollView.contentOffset = CGPoint(x: -100, y: -100)
+        scrollView.delegate = self
+        
         
         view.addSubview(scrollView)
         
