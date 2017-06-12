@@ -1,4 +1,4 @@
-# Gesture Practice
+# Adding Gesture Programatically
 
 - has scroll up / down / right /left
 - double tap / pinch
