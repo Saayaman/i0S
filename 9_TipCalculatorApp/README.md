@@ -1,3 +1,5 @@
-# UIScrollView Practice
+# Tip Calculator Tutorial
 
-![Output](https://github.com/Saayaman/ImageStorage/blob/master/ScrollView.gif)
+A simple calculator app that calculates tips that are 15%.
+
+![Output](https://github.com/Saayaman/ImageStorage/blob/master/TipCalculator.gif)
