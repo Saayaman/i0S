@@ -1,7 +1,8 @@
-# i0S
+# i0S tutorials with GIFs!!!
+
 
 These are practice codes I've been doing for class and for myself!
 I hope these help you understand better iOS like me!
 
-I will upload as many gifs as possible
-![alt text](https://github.com/Saayaman/ImageStorage/blob/master/passingData.gif)
+Under each folder I added an animated GIF to show the movements!
+# Please add STAR if this became a help to you
