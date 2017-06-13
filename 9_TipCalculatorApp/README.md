@@ -1,4 +1,4 @@
-# UIScrollView Practice
+# Tip Calculator Tutorial
 
 A simple calculator app that calculates tips that are 15%.
 
