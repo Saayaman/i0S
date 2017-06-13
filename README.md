@@ -1,4 +1,4 @@
-# i0S
+# i0S tutorials with GIFs!!!
 
 
 These are practice codes I've been doing for class and for myself!
