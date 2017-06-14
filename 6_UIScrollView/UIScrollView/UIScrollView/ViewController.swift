@@ -54,7 +54,6 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         }
     }
     
-    
     override func viewWillLayoutSubviews() {
         setZoomScale()
     }
