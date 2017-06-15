@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -21,27 +22,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0j8-MX-OA1">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <subviews>
-                                    <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="hOL-bf-UXQ">
-                                        <rect key="frame" x="136" y="541" width="102" height="37"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </pageControl>
-                                </subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="0j8-MX-OA1">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="581"/>
                             </scrollView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="5" translatesAutoresizingMaskIntoConstraints="NO" id="bQY-rZ-GtX">
+                                <rect key="frame" x="140" y="610" width="95" height="37"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </pageControl>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="0j8-MX-OA1" secondAttribute="bottom" id="65d-mk-XKm"/>
-                            <constraint firstAttribute="trailing" secondItem="0j8-MX-OA1" secondAttribute="trailing" id="Iiq-Aa-RMp"/>
-                            <constraint firstItem="0j8-MX-OA1" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="UbV-1W-lc7"/>
-                            <constraint firstItem="0j8-MX-OA1" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="bqF-1n-Srh"/>
+                            <constraint firstAttribute="trailing" secondItem="0j8-MX-OA1" secondAttribute="trailing" id="1e3-ey-i6n"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="bQY-rZ-GtX" secondAttribute="trailing" constant="124" id="R4U-fF-BgX"/>
+                            <constraint firstItem="bQY-rZ-GtX" firstAttribute="top" secondItem="0j8-MX-OA1" secondAttribute="bottom" constant="29" id="cpr-O9-JlC"/>
+                            <constraint firstItem="bQY-rZ-GtX" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="124" id="eYv-EX-yd6"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="bQY-rZ-GtX" secondAttribute="bottom" constant="20" id="o0t-Bs-35w"/>
+                            <constraint firstItem="0j8-MX-OA1" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="pdZ-RW-ETX"/>
+                            <constraint firstItem="0j8-MX-OA1" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="zFk-Wf-GzQ"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="RDb-9f-shB"/>
                     <connections>
-                        <outlet property="pageControll" destination="hOL-bf-UXQ" id="roj-1w-dg8"/>
+                        <outlet property="pageControll" destination="bQY-rZ-GtX" id="KU4-te-t7d"/>
                         <outlet property="scrollView" destination="0j8-MX-OA1" id="93h-Vb-vVO"/>
                         <segue destination="KBf-NX-iK4" kind="show" identifier="DetailsViewController" id="IpY-ju-JIl"/>
                     </connections>
