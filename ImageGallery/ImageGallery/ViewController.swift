@@ -19,10 +19,7 @@ class ViewController: UIViewController, UIScrollViewDelegate, UIGestureRecognize
     
     let cellidentifier = "cell"
     let images = ["sea1","sea2","sea3","sea4","sea5"]
-    var imageViews:[UIImageView] = []
-//    var imageView1: UIImageView!
-    
-    
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,62 +29,32 @@ class ViewController: UIViewController, UIScrollViewDelegate, UIGestureRecognize
         scrollView.contentSize = CGSize(width: (scrollWidth * 5), height: scrollHeight)
         scrollView.isPagingEnabled = true
         
-        for (index,image) in images.enumerated(){
-            let imageV = setImage(name: image, tag: index)
-            imageViews.append(imageV)
-            scrollView.addSubview(imageV)
+        for index in 0..<images.count{
+
+            let imageView = UIImageView(frame: CGRect(x: scrollWidth * CGFloat(index), y: 0, width: scrollWidth, height: scrollHeight))
+            
+            
+            imageView.backgroundColor = UIColor.yellow
+            imageView.image = UIImage(named: images[index])
+            imageView.tag = index
+            
+            let tap:UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.tap(_:)))
+            tap.delegate = self
+            
+            imageView.isUserInteractionEnabled = true
+
+            imageView.addGestureRecognizer(tap)
+            scrollView.addSubview(imageView)
+
         }
-        
-        view.insertSubview(pageControll, at: 0)
-        view.bringSubview(toFront: pageControll)
-        
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-    
-    func setImage(name:String, tag: Int)-> UIImageView{
-        
 
-        let imageView = UIImageView(image: UIImage(named: name))
-        imageView.tag = tag
-        imageView.backgroundColor = UIColor.red
-        
-        imageView.frame = CGRect(x: scrollWidth * CGFloat(imageView.tag + 1), y: 0, width: scrollWidth, height: scrollHeight)
-        
-        print("xpotision tag0: \(scrollWidth * CGFloat(tag))")
-        imageView.backgroundColor = UIColor.red
-        
-        
-        imageView.isUserInteractionEnabled = true
-        
-        imageView.translatesAutoresizingMaskIntoConstraints = false
 
-//        
-//        if imageView.tag == 0{
-//            imageView.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor, constant: 0).isActive = true
-//
-//        } else {
-//            let previousView = imageViews[imageView.tag - 1]
-//            imageView.leadingAnchor.constraint(equalTo: previousView.trailingAnchor, constant: 0).isActive = true
-//        }
-        
-//        imageView.widthAnchor.constraint(equalToConstant: scrollWidth).isActive = true
-//        imageView.heightAnchor.constraint(equalToConstant: scrollHeight).isActive = true
-//
-
-        let tap:UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(ViewController.tap(_:)))
-        tap.delegate = self
-        imageView.addGestureRecognizer(tap)
-        scrollView.addSubview(imageView)
-
-        return imageView
-    }
-    
     func tap(_ sender: UITapGestureRecognizer) {
-        print("tap")
-        //print("\(sender.view?.tag)")
         performSegue(withIdentifier: "DetailsViewController", sender: sender.view?.tag)
     }
     

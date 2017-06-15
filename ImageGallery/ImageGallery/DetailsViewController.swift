@@ -13,7 +13,6 @@ class DetailsViewController: UIViewController, UIScrollViewDelegate {
         super.viewDidLoad()
         
         secondVC.delegate = self
-        secondVC.backgroundColor = UIColor.blue
         
         print("sea\(String(describing: senderTag))")
         
