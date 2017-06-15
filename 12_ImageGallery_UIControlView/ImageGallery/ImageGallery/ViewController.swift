@@ -33,7 +33,6 @@ class ViewController: UIViewController, UIScrollViewDelegate, UIGestureRecognize
 
             let imageView = UIImageView(frame: CGRect(x: scrollWidth * CGFloat(index), y: 0, width: scrollWidth, height: scrollHeight))
             
-            
             imageView.backgroundColor = UIColor.yellow
             imageView.image = UIImage(named: images[index])
             imageView.tag = index

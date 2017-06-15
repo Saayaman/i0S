@@ -13,9 +13,7 @@ class DetailsViewController: UIViewController, UIScrollViewDelegate {
         super.viewDidLoad()
         
         secondVC.delegate = self
-        
-        print("sea\(String(describing: senderTag))")
-        
+    
         self.imageView.image = UIImage(named: "sea\(String(describing: senderTag + 1))")
         secondVC.setZoomScale(1,animated:false)
         
