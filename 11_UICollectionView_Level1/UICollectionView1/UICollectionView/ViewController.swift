@@ -13,16 +13,23 @@ class ViewController: UIViewController, UICollectionViewDelegateFlowLayout, UICo
         let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
         layout.sectionInset = UIEdgeInsets(top: 20, left: 10, bottom: 10, right: 10)
         layout.itemSize = CGSize(width: 90, height: 90)
+        
         collectionView = UICollectionView(frame: self.view.frame, collectionViewLayout: layout)
         collectionView!.dataSource = self
         collectionView!.delegate = self
         collectionView!.register(CollectionViewCell.self, forCellWithReuseIdentifier: "CollectionViewCell")
         collectionView!.backgroundColor = UIColor.white
+        
         self.view.addSubview(collectionView!)
     }
     
-    //These methods are overridden by
     
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
+    // CollectionViewDelegate Overrides
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 3
@@ -42,10 +49,14 @@ class ViewController: UIViewController, UICollectionViewDelegateFlowLayout, UICo
     }
 
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    
+    //Override FlowlayoutDelegate
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout,sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: 144, height: 90)
     }
+    
 
 
 }
