@@ -1,0 +1,12 @@
+PODS:
+  - Animation (1.0.0)
+
+DEPENDENCIES:
+  - Animation (~> 1.0)
+
+SPEC CHECKSUMS:
+  Animation: b6dfe2742baf6c8467954f9840081afb0c897652
+
+PODFILE CHECKSUM: 36616ebebc8e11efd1492fc08938891de9dc7b2a
+
+COCOAPODS: 1.2.1
