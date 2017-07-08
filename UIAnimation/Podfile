@@ -6,6 +6,6 @@ target 'UIAnimation' do
   use_frameworks!
 
   # Pods for UIAnimation
-  pod 'Animation', '~> 1.0'
+  # pod 'Animation', '~> 1.0'
 
 end

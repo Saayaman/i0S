@@ -15,11 +15,9 @@ class PlaceInformation: UIView{
     @IBOutlet weak var addressName: UILabel!
     @IBOutlet weak var distanceIcon: UIImageView!
     
-    var placeID: String = ""
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-//        autoresizesSubviews = false
         loadXibView()
     }
 
@@ -28,29 +26,13 @@ class PlaceInformation: UIView{
         loadXibView()
     }
 
-    func loadXibView() {
-        let view = Bundle.main.loadNibNamed("PlaceInformation", owner: self, options: nil)?.first as! UIView
-//        view.frame = self.bounds
-//        self.distanceIcon.isUserInteractionEnabled = true
-        self.addSubview(view)
+    func loadXibView()
+    {
+        let xibFile = Bundle.main.loadNibNamed("PlaceInformation", owner: self, options: nil)?.first as! UIView
+        xibFile.frame = self.bounds
+        self.addSubview(xibFile)
     }
-    
-    func setSelectedPlaceName(_ name:String) {
-        self.placeName.text = name
-    }
-    
-    func setSelectedAddress(_ address: String) {
-        self.addressName.text = address
-    }
-    
-    func setGooglePlaceID(_ placeID: String) {
-        self.placeID = placeID
-    }
-    
-    func gerGooglePlaceID() -> String {
-        return self.placeID
-    }
-    
 
-
+    
+    
 }
