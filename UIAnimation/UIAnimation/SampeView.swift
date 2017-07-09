@@ -15,7 +15,6 @@ class SampleView: UIView {
         loadXibView()
 
     }
-
         required init?(coder aDecoder: NSCoder) {
             super.init(coder: aDecoder)
             loadXibView()
@@ -24,7 +23,6 @@ class SampleView: UIView {
         func loadXibView() {
             let view = Bundle.main.loadNibNamed("SampleView", owner: self, options: nil)?.first as! UIView
             view.frame = self.bounds
-    //        self.distanceIcon.isUserInteractionEnabled = true
             self.addSubview(view)
         }
 }

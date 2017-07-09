@@ -12,7 +12,6 @@ class ViewController: UIViewController {
 
 
     @IBOutlet weak var myView: UIView!
-    @IBOutlet weak var topView: UIView!
 
     var isVisible = true
 
