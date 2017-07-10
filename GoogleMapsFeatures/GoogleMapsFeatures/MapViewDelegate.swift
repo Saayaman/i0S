@@ -1,13 +1,8 @@
-//
-//  MapViewDelegate.swift
-//  CollectionView3
-//
-//  Created by ayako_sayama on 2017-07-09.
-//  Copyright © 2017 ayako_sayama. All rights reserved.
-//
+
 
 import UIKit
 import GoogleMaps
+import GooglePlaces
 
 class MapViewDelegate: NSObject, GMSMapViewDelegate{
     
@@ -18,7 +13,15 @@ class MapViewDelegate: NSObject, GMSMapViewDelegate{
         super.init()
         
         self.vc = vc
+        
+        let polyLine: GMSPolyline = GMSPolyline()
+        polyLine.isTappable = true
+        vc.mapView.isUserInteractionEnabled = true
         vc.mapView.delegate = self
+
+        vc.mapView.settings.setAllGesturesEnabled(true)
+        vc.mapView.settings.consumesGesturesInView = true
+        
     }
 
 
@@ -29,12 +32,47 @@ class MapViewDelegate: NSObject, GMSMapViewDelegate{
     }
     
     func mapView(_ mapView: GMSMapView, didTapAt coordinate: CLLocationCoordinate2D) {
-        
-        
+        vc.coordinateTapped()
         print("Tapped at Coordinate")
+        
+//        let location = CLLocationCoordinate2D(latitude: coordinate.latitude, longitude: coordinate.longitude)
+//        marker.position = location
+//        self.reverseGeocodeCoordinate(coordinate: coordinate, marker: marker)
+//        marker.map = mapView
     }
     
+    func mapView(_ mapView:GMSMapView, didTapPOIWithPlaceID placeID:String,
+                 name:String, location:CLLocationCoordinate2D) {
+        print("You tapped \(name): \(placeID), \(location.latitude)/\(location.longitude)")
+        
+        
+        let infoMarker = GMSMarker(position: location)
+        infoMarker.snippet = placeID
+        infoMarker.title = name
+        infoMarker.opacity = 0;
+        infoMarker.appearAnimation = .pop
+        infoMarker.infoWindowAnchor.y = 1
+        infoMarker.userData = placeID
+        infoMarker.map = mapView
+        mapView.selectedMarker = infoMarker
+    }
 
     
-
+    
+    func reverseGeocodeCoordinate(coordinate: CLLocationCoordinate2D, marker: GMSMarker) {
+        
+        let geocoder = GMSGeocoder()
+        geocoder.reverseGeocodeCoordinate(coordinate) { response, error in
+            if let address = response?.firstResult() {
+                
+                // 3
+                let title = address.lines as [String]?
+                marker.title = title?.first
+                
+                UIView.animate(withDuration: 0.25) {
+                }
+            }
+        }
+    }
+    
 }

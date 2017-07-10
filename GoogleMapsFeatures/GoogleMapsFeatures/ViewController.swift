@@ -74,6 +74,10 @@ class ViewController: UIViewController {
         )
         
     }
+    
+    func coordinateTapped(){
+        buttonTapped()
+    }
 
     
     

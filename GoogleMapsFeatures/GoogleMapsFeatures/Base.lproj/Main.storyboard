@@ -47,7 +47,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="Yli-zx-jCc">
                     <connections>
-                        <segue destination="iPd-MP-xko" kind="show" id="8i7-vn-HjL"/>
+                        <segue destination="iPd-MP-xko" kind="push" id="8i7-vn-HjL"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
@@ -66,6 +66,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.99704318579999995" green="0.57587348090000001" blue="0.38087884249999998" alpha="1" colorSpace="deviceRGB"/>
                     </view>
+                    <navigationItem key="navigationItem" id="2JP-SU-jGV"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="efY-ph-6NR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
