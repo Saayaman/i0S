@@ -8,12 +8,13 @@ class ViewController: UIViewController {
     @IBOutlet weak var mapView: GMSMapView!
     @IBOutlet weak var myView: UIView!
     
-    var manager:MapCLLocationManager!
     var delegate: MapViewDelegate!
-    fileprivate var placesClient: GMSPlacesClient!
+    var manager:MapCLLocationManager!
 
     var markers: [GMSMarker] = []
     var isVisible = false
+    
+    fileprivate var placesClient: GMSPlacesClient!
 
 
     override func viewDidLoad() {
@@ -36,17 +37,7 @@ class ViewController: UIViewController {
         myView.center.y  += view.bounds.height
     }
     
-//    override func viewDidAppear(_ animated: Bool) {
-//        super.viewDidAppear(animated)
-//        
-//        UIView.animate(withDuration: 0.5, delay: 0.3, options: [],
-//                       animations: {
-//                        self.myView.center.y -= self.view.bounds.height
-//        },
-//                       completion: nil
-//        )
-//    }
-//    
+
     
     func loadTemplate(){
         let view = SampleView(frame: CGRect(x: 0, y: 0, width: self.view.bounds.width, height: self.view.bounds.height))
@@ -79,8 +70,6 @@ class ViewController: UIViewController {
         buttonTapped()
     }
 
-    
-    
 }
 
 

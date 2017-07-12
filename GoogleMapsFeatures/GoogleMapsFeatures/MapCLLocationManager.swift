@@ -13,9 +13,7 @@ import GooglePlaces
 class MapCLLocationManager: NSObject, CLLocationManagerDelegate{
     
     var mapView:GMSMapView!
-
     fileprivate var zoomLevel: Float = 15.0
-
     var locationManager = CLLocationManager()
 
     

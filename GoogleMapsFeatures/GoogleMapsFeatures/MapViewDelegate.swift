@@ -16,9 +16,9 @@ class MapViewDelegate: NSObject, GMSMapViewDelegate{
         
         let polyLine: GMSPolyline = GMSPolyline()
         polyLine.isTappable = true
-        vc.mapView.isUserInteractionEnabled = true
         vc.mapView.delegate = self
 
+        vc.mapView.isUserInteractionEnabled = true
         vc.mapView.settings.setAllGesturesEnabled(true)
         vc.mapView.settings.consumesGesturesInView = true
         
@@ -34,11 +34,7 @@ class MapViewDelegate: NSObject, GMSMapViewDelegate{
     func mapView(_ mapView: GMSMapView, didTapAt coordinate: CLLocationCoordinate2D) {
         vc.coordinateTapped()
         print("Tapped at Coordinate")
-        
-//        let location = CLLocationCoordinate2D(latitude: coordinate.latitude, longitude: coordinate.longitude)
-//        marker.position = location
-//        self.reverseGeocodeCoordinate(coordinate: coordinate, marker: marker)
-//        marker.map = mapView
+
     }
     
     func mapView(_ mapView:GMSMapView, didTapPOIWithPlaceID placeID:String,

@@ -14,21 +14,6 @@ class MapMaker {
     
     let latitude = 35.705640
     let longitude = 139.751891
-//    
-//    
-//    
-//    func makeMarkers(mapView: GMSMapView, folder: Folder){
-//        
-//        let data:Folder? = folder
-//        
-//        if (data != nil){
-//            for spot in (data?.spots)!{
-//                let marker = makeMarker(spot: spot)
-//                marker.map = mapView
-//            }
-//        }
-//        
-//    }
     
     func makeMarker(_ mapVIew: GMSMapView){
         

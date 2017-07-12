@@ -10,6 +10,9 @@ import UIKit
 
 class SampleView: UIView {
 
+    @IBOutlet weak var label: UILabel!
+    @IBOutlet weak var placeID: UILabel!
+    
     override init(frame: CGRect) {
         super.init(frame:frame )
         loadXibView()
@@ -23,6 +26,7 @@ class SampleView: UIView {
         func loadXibView() {
             let view = Bundle.main.loadNibNamed("SampleView", owner: self, options: nil)?.first as! UIView
             view.frame = self.bounds
+            label.text = "Hi my name is jo"
             self.addSubview(view)
         }
 }

@@ -47,7 +47,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="Yli-zx-jCc">
                     <connections>
-                        <segue destination="iPd-MP-xko" kind="push" id="8i7-vn-HjL"/>
+                        <segue destination="iPd-MP-xko" kind="show" identifier="toDetailView" id="8i7-vn-HjL"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>

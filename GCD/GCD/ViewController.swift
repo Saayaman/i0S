@@ -10,7 +10,6 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var imageView: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -19,17 +18,16 @@ class ViewController: UIViewController {
 //        simpleQueues()
 //        queueWithQos()
         
-//        concurrentQueue()
+//        attribuesTest()
 //        if let queue = inactiveQueue{
 //            queue.activate()
 //        }
-        
 //        queueWithDelay()
         
 
-//        globalQueue()
+        globalQueue()
 //        fetchImage()
-        disPatchItem()
+//        disPatchItem()
         
 
     }
@@ -42,34 +40,39 @@ class ViewController: UIViewController {
     
     func simpleQueues(){
         //when you create a queue, you can put a 1. label, and put a 2. quality
-        let queue = DispatchQueue(label: "com.ayakosayama.GCD")
+        let queue = DispatchQueue(label: "com.ayakosayama.simpleQueue")
         queue.sync {
             for i in 0..<10{
-                print("red",i)
+                print("💜",i)
             }
         }
         
         for i in 100..<110{
-            print("blue",i)
+            print("💛",i)
         }
+
     }
 
     func queueWithQos(){
-//        let queue = DispatchQueue(label: "com.derrick.myqueue1", qos: .userInitiated)
-        
-        let queue = DispatchQueue(label: "com.derrick.myqueue1", qos: .background)
-        
-        // .utility = doesnt matter when
-//        let queue2 = DispatchQueue(label: "com.derrick.myqueue2", qos: .utility)
-        
-        let queue2 = DispatchQueue(label: "com.derrick.myqueue2", qos: .userInteractive)
         
         
+        let queue = DispatchQueue(label: "com.ayakosayama.myqueue1")
+        let queue2 = DispatchQueue(label: "com.ayakosayama.myqueue2")
+        
+//        
+//        let queue = DispatchQueue(label: "com.ayakosayama.myqueue1", qos: .userInitiated)
+//        let queue2 = DispatchQueue(label: "com.ayakosayama.myqueue2", qos: .utility)
+        
+        
+//        let queue = DispatchQueue(label: "com.ayakosayama.myqueue1", qos: .background)
+//        let queue2 = DispatchQueue(label: "com.ayakosayama.myqueue2", qos: .userInteractive)
+
+
+
         queue.async {
             for i in 0..<10{
                 print("🔵",i)
             }
-            
         }
         
         queue2.async {
@@ -81,21 +84,26 @@ class ViewController: UIViewController {
         for i in 1000..<1010{
             print("⚫️",i)
         }
-    }
+}
     
+    
+    
+
+    
+    
+
+//let anotherQueue = DispatchQueue(label: "com.derrick.anotherqueue", qos: .utility, attributes: .concurrent)
     var inactiveQueue: DispatchQueue!
+    let anotherQueue = DispatchQueue(label: "com.appcoda.anotherQueue", qos: .utility, attributes: .initiallyInactive)
     
-    func concurrentQueue(){
-        let anotherQueue = DispatchQueue(label: "com.derrick.anotherqueue", qos: .utility, attributes: [.initiallyInactive, .concurrent])
+    func attribuesTest(){
         
         inactiveQueue = anotherQueue
-        
-        
+
         anotherQueue.async {
             for i in 0..<10{
                 print("🔵",i)
             }
-            
         }
         
         anotherQueue.async {
@@ -109,34 +117,34 @@ class ViewController: UIViewController {
                 print("⚫️",i)
             }
         }
-        
     }
     
     
     func queueWithDelay(){
+        print(Date())
+
         let delayqueue = DispatchQueue(label: "com.ayakosayama.delayqueue", qos: .userInteractive)
         
         let additinalTime:DispatchTimeInterval = .seconds(2)
         delayqueue.asyncAfter(deadline: .now() + additinalTime){
             print(Date())
         }
-        
     }
     
     func globalQueue(){
         let globalQueue = DispatchQueue.global()
+
         globalQueue.async {
-            //assigns a non-used thread randomly
-            for i in 1000..<1010{
-                print("⚫️",i)
-            }
+            print(globalQueue.qos)
+            for i in 1..<1000{ print("⚫️",i)}
         }
     }
     
-    
+    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var label: UILabel!
+
     func fetchImage(){
-        
-        
+        label.text = "downloading..."
         let imageURL: URL = URL(string: "https://worldstrides.com/wp-content/uploads/2015/07/12-Chureito-pagoda-and-Mount-Fuji-Japan.jpg")!
         
         //this enables the UI to be loaded first, and when Image id downloaded, UI is update!
@@ -146,12 +154,11 @@ class ViewController: UIViewController {
                 
                 //you have to make main thread async or else image won't be stored.
                 DispatchQueue.main.async {
-                    print("downloaded?")
+                    self.label.text = "finished downloading!"
                     self.imageView.image = UIImage(data: data)
                 }
             }
         }).resume()
-
     }
     
     
@@ -178,4 +185,3 @@ class ViewController: UIViewController {
     
     
 }
-
