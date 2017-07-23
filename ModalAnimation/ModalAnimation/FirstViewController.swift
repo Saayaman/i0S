@@ -15,8 +15,6 @@ class FirstViewController: UIViewController {
     @IBOutlet weak var pinkCenterYConstraint: NSLayoutConstraint!
     @IBOutlet weak var greenTopConstraint: NSLayoutConstraint!
     @IBOutlet weak var blueTopConstraint: NSLayoutConstraint!
-
-    @IBOutlet weak var boxGreenCenterYConstraint: NSLayoutConstraint!
     @IBOutlet weak var redBox: UIView!
 
     
